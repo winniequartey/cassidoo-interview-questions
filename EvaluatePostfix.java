@@ -28,16 +28,16 @@ class EvaluatePostfix {
         operators.put("÷", "division");
         operators.put("/", "division");
         int result = 0;
+        int second; int first;
         List<Integer> evaluatorStack = new ArrayList<>();
         for (int i = 0; i < input.length(); i++) {
             if(!operators.containsKey(String.valueOf(input.charAt(i)))){
                 evaluatorStack.add(input.charAt(i) - '0');
             } else {
                 if(evaluatorStack.size() > 1){
-                    int stackSize = evaluatorStack.size();
-                    int first = evaluatorStack.get(stackSize-2);
-                    int second = evaluatorStack.get(stackSize-1);
+                    second = evaluatorStack.getLast();
                     evaluatorStack.removeLast(); 
+                    first = evaluatorStack.getLast();
                     evaluatorStack.removeLast();
                     switch (operators.get(String.valueOf(input.charAt(i)))) {
                         case "add":
