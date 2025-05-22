@@ -1,5 +1,6 @@
 /**
  * Cassidoo Interview question of the week @ https://buttondown.com/cassidoo/archive/imagination-is-more-important-than-knowledge/
+ * Solution inspired by algorithm from https://codepen.io/Tzyinc/pen/GggaJpM
  */
 public class ASCIICubeArt{
     public static void main(String[] args){
